@@ -15,21 +15,20 @@ httpd.
 ## Install
 
 The common way to install this module is:
-```
-	./configure --with-apache=/path/to/apache/install
-	make
-	make install
-```
+
+    ./configure --with-apache=/path/to/apache/install
+    make
+    make install
+
 This will result in a DSO installation of the module in the Apache modules directory
 and the activation of the module in the httpd.conf file by adding a line similar to:
-```
-	LoadModule hacf_module        modules/libmodhacf.so
-```
+
+    LoadModule hacf_module        modules/libmodhacf.so
 
 The unit tests are run using the standard Automake idiom:
-```
-	make check
-```
+
+    make check
+
 
 ## Install from source repository
 
@@ -46,20 +45,20 @@ The autotools used by the author are:
 Newer versions should work also.
 
 To generate the configure script and supporting files it should suffice to run:
-```
-	autoreconf --install
-```
+
+    autoreconf --install
+
 
 ## Usage
 
 For a Java site with URL http://server.example.com/app one would use:
-```
-	<Location /app>
-	  HacfLanguage Java
-	  ProxyPass http://server.example.com/app
-	  ProxyPassReverse http://server.example.com/app
-	</Location>
-```
+
+    <Location /app>
+      HacfLanguage Java
+      ProxyPass http://server.example.com/app
+      ProxyPassReverse http://server.example.com/app
+    </Location>
+
 For a PHP5 site one would use PHP as the value of the HacfLanguage setting
 
 The request filtering can be tuned using the parameters:
