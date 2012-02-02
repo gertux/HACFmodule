@@ -1,0 +1,3 @@
+SUBDIRS=src test
+ACLOCAL_AMFLAGS = -I auto/m4
+APXS = @APXS@

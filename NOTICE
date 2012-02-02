@@ -1,0 +1,9 @@
+Apache Hash Algorithm Collision module.
+* Copyright (c) 2012, Gert Dewit (gert at hobbiton.be) for hobbiton bvba
+* The module is released under the Apache License, Version 2.0 :
+* http://www.apache.org/licenses/LICENSE-2.0
+
+CuTest: unit testing library
+* Copyright (c) 2002-2006 Asim Jalis
+* This library is released under the zlib/libpng license :
+* http://www.opensource.org/licenses/zlib-license.html
