@@ -1,3 +1,3 @@
 SUBDIRS=src test
-ACLOCAL_AMFLAGS = -I auto/m4
+ACLOCAL_AMFLAGS = -I autotools/m4
 APXS = @APXS@

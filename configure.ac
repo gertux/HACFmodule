@@ -3,8 +3,8 @@
 
 AC_PREREQ(2.61)
 AC_INIT([hacf_apache_module], [0.9.1], [hacf@hobbiton.be])
-AC_CONFIG_AUX_DIR([auto/aux])
-AC_CONFIG_MACRO_DIR([auto/m4])
+AC_CONFIG_AUX_DIR([autotools/aux])
+AC_CONFIG_MACRO_DIR([autotools/m4])
 AM_INIT_AUTOMAKE([foreign])
 LT_INIT
 
