@@ -31,7 +31,7 @@ AC_CHECK_FILE([${apache_exp_libdir}],[LDFLAGS="-L${apache_exp_libdir}"],[AC_MSG_
 AC_SEARCH_LIBS([apr_palloc], [apr-0 apr-1], [], [AC_MSG_ERROR([apr_palloc not found])])
 
 # Checks for header files.
-AC_CHECK_HEADER([apr_pools.h], [], [AC_MSG_ERROR([apr_pools.h not found, use --with-apache=PATH to point to the apache server installation])])
+AC_CHECK_HEADER([apr_pools.h], [], [AC_MSG_ERROR([apr_pools.h not found, use --with-apxs=PATH to point to apxs of the Apache server you want to use])])
 AC_CHECK_HEADER([httpd.h], [], [AC_MSG_ERROR([httpd.h not found, use --with-apxs=PATH to point to apxs of the Apache server you want to use])])
 AC_HEADER_STDC
 AC_CHECK_HEADERS([stdlib.h string.h])
