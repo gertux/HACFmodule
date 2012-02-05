@@ -16,7 +16,14 @@ httpd.
 
 The common way to install this module is:
 
-    ./configure --with-apache=/path/to/apache/install
+    ./configure
+    make
+    make install
+
+If the APache eXtention tool (apxs) is not on your path or you want to specify which apxs to
+use, append the --with-apxs configure option. For example:
+
+    ./configure --with-apxs=/usr/local/apache2/bin/apxs
     make
     make install
 
@@ -29,29 +36,11 @@ The unit tests are run using the standard Automake idiom:
 
     make check
 
-
-## Install from source repository
-
-If you want to install from the sources you checked out from the source repository,
-you will need to generate the configure script and supporting files using the GNU
-autotools.
-
-The autotools used by the author are:
-
-- autoconf (GNU Autoconf) 2.61
-- automake (GNU automake) 1.10
-- libtoolize (GNU libtool) 2.2.10
-
-Newer versions should work also.
-
-To generate the configure script and supporting files it should suffice to run:
-
-    autoreconf --install
-
-
 ## Usage
 
-For a Java site with URL http://server.example.com/app one would use:
+If you already use an Apache reverse proxy, just add the correct HacfLanguage directive to 
+the relevant section of your httpd.conf.
+The configuration for a Java site with URL http://server.example.com/app would be:
 
     <Location /app>
       HacfLanguage Java
@@ -59,7 +48,7 @@ For a Java site with URL http://server.example.com/app one would use:
       ProxyPassReverse http://server.example.com/app
     </Location>
 
-For a PHP5 site one would use PHP as the value of the HacfLanguage setting
+For a PHP5 site, use PHP as the value of the HacfLanguage setting
 
 The request filtering can be tuned using the parameters:
 
@@ -74,7 +63,6 @@ most applications.
 The current features are very limited to the environment this module originally was written
 for, but the following TODOs should be ready before version 1.0.0
 
-- support Apache 2.2 and higher
 - smart multipart post filtering
 - PHP4 support, uses a different Hash Algorithm than PHP5
 - Python support, 32bit only because 64bit doesn't seem practical to exploit 
