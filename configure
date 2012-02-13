@@ -12175,8 +12175,8 @@ fi
 if test $ac_cv_header_apr_pools_h = yes; then
   :
 else
-  { { echo "$as_me:$LINENO: error: apr_pools.h not found, use --with-apache=PATH to point to the apache server installation" >&5
-echo "$as_me: error: apr_pools.h not found, use --with-apache=PATH to point to the apache server installation" >&2;}
+  { { echo "$as_me:$LINENO: error: apr_pools.h not found, use --with-apxs=PATH to point to apxs of the Apache server you want to use" >&5
+echo "$as_me: error: apr_pools.h not found, use --with-apxs=PATH to point to apxs of the Apache server you want to use" >&2;}
    { (exit 1); exit 1; }; }
 fi
 
